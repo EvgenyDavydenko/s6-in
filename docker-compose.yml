@@ -9,8 +9,8 @@ services:
             - 5173:5173 #package.json "scripts": {"dev": "vite --host"}
         links:
             - database
-        volumes:
-            - ./:/var/www/html
+        # volumes:
+        #     - ./:/var/www/html
         tty: true
         # symfony server:start
         # php -S php82cli:8000 -t public

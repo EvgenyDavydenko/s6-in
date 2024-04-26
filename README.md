@@ -1,3 +1,18 @@
+### кнонируем репозиторий
+```
+git clone https://github.com/EvgenyDavydenko/s6-in
+```
+### Запустить контейнер
+```
+cd s6-in
+docker compose up -d
+docker exec symfony-php82cli-bookworm symfony console doctrine:migrations:migrate
+docker exec symfony-php82cli-bookworm symfony console doctrine:fixtures:load --no-interaction
+docker exec symfony-php82cli-bookworm symfony server:start
+```
+### имтортировать коллекцию постмэн
+---
+
 1.  Creating Symfony Applications
 ```
 composer create-project symfony/skeleton:"6.4.*" ./
